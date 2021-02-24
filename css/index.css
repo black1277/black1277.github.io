@@ -1,12 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+
+}
 body {
     padding-top: 100px;
     padding-left: 50px;
     background: #d4fff5;
-    font-family: Verdana;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #151526;
 }
 h2 {
     text-align: center;
+    font-size: 1.35rem;
+    border-radius: 7px;
+    padding: 5px 10px;
+    color: #ffca92;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    background: rgb(105,0,61);
+    background: linear-gradient(175deg, rgba(105,0,61,1) 0%, rgba(148,0,78,1) 27%, rgba(228,45,166,1) 100%);
 }
 #txt{
     border: 1px solid #474747;

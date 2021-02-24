@@ -1,4 +1,4 @@
 document.addEventListener("DOMContentLoaded", (a)=>{
     const $content = document.getElementById('txt')
-    $content.innerHTML = '<hr /> Text from js <hr />'
+    $content.innerHTML = '<br /><hr /> Text from js <hr /><br />' + new Date()
 })
