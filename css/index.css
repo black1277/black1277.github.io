@@ -7,8 +7,7 @@ html {
 
 }
 body {
-    padding-top: 100px;
-    padding-left: 50px;
+    padding: 100px 50px;
     background: #d4fff5;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #151526;
@@ -25,4 +24,13 @@ h2 {
 }
 #txt{
     border: 1px solid #474747;
+    padding: 10px 15px;
+}
+p{
+    text-indent: 1.5em;
+    text-align: justify;
+}
+p:first-letter{
+    color: red;
+    font-size: 1.6rem;
 }
