@@ -1,0 +1,13 @@
+body {
+    padding-top: 100px;
+    padding-left: 50px;
+    background: #d4fff5;
+    font-family: Verdana;
+    color: #151526;
+}
+h2 {
+    text-align: center;
+}
+#txt{
+    border: 1px solid #474747;
+}
