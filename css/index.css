@@ -7,7 +7,7 @@ html {
 
 }
 body {
-    padding: 100px 50px;
+    padding: 100px 40px;
     background: #d4fff5;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #151526;
@@ -33,4 +33,24 @@ p{
 p:first-letter{
     color: red;
     font-size: 1.6rem;
+}
+button{
+    padding: 7px 20px;
+    font-weight: bold;
+}
+.content .red{
+    background: #ff1863;
+}
+.red{
+    color: #d4fff5;
+    font-weight: bold;
+}
+.dinamics{
+    width: 30%;
+    margin: 5px auto;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    background: #768186;
 }
