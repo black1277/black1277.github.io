@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 html {
-
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 body {
     padding: 100px 40px;
@@ -20,7 +21,7 @@ h2 {
     color: #ffca92;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
     background: rgb(105,0,61);
-    background: linear-gradient(175deg, rgba(105,0,61,1) 0%, rgba(148,0,78,1) 27%, rgba(228,45,166,1) 100%);
+    background: linear-gradient(175deg, rgba(105,0,61,1) 0%, rgba(148,0,78,1) 27%, rgb(228, 45, 166) 100%);
 }
 #txt{
     border: 1px solid #474747;
@@ -37,4 +38,33 @@ p:first-letter{
 button{
     padding: 7px 20px;
     font-weight: bold;
+<<<<<<< HEAD
 }
+=======
+}
+.content .red{
+    background: #ff1863;
+}
+.red{
+    color: #d4fff5;
+    font-weight: bold;
+}
+.dinamics{
+    width: 30%;
+    margin: 5px auto;
+    padding: 10px 20px;
+    text-align: center;
+    border: 1px solid #eee;
+    border-radius: 7px;
+    background: #768186;
+}
+.sss {
+    background: #01E400;
+    background: #FEFF01;
+    background: #FF7E00;
+    background: #FB0300;
+    background: #9B004A;
+    background: #7D0022;
+
+}
+>>>>>>> branch2
