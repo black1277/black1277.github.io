@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", (a)=>{
         event.target.classList.toggle('red')
     })
     $btn1.addEventListener('click', async ()=>{
-        TotalLength(98)
+        TotalLength(110)
         await  animateCSS('din', 'rotateOut')
         await  animateCSS('din', 'backInDown')
         await  delay(1000)
