@@ -18,9 +18,151 @@
 <div class="content">
     <h2>Hello world!</h2>
     <p><img src="img/drakon.png" alt="drakon"></p>
-    <div id="txt">Other text</div>
+    <div id="txt">Other text</div><p>https://black1277.github.io/</p>
     <div class="dinamics" id="din">Animate</div>
     <button id="btn1">Button</button>
+
+    <svg id="svg1" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="200" height="200" viewBox="0 0 120 120" >
+        <defs>
+            <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="red"/>
+                <stop offset="50%" stop-color="black" stop-opacity="0"/>
+                <stop offset="100%" stop-color="blue"/>
+            </linearGradient>
+            <linearGradient id="linearColors" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="5%" stop-color="#01E400"></stop>
+                <stop offset="25%" stop-color="#FEFF01"></stop>
+                <stop offset="40%" stop-color="#FF7E00"></stop>
+                <stop offset="60%" stop-color="#FB0300"></stop>
+                <stop offset="80%" stop-color="#9B004A"></stop>
+                <stop offset="100%" stop-color="#7D0022"></stop>
+            </linearGradient>
+            <linearGradient id="linearColors1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#01E400"></stop>
+                <stop offset="100%" stop-color="#FEFF01"></stop>
+            </linearGradient>
+            <linearGradient id="linearColors2" x1="0.5" y1="0" x2="0.5" y2="1">
+                <stop offset="0%" stop-color="#FEFF01"></stop>
+                <stop offset="100%" stop-color="#FF7E00"></stop>
+            </linearGradient>
+            <linearGradient id="linearColors3" x1="1" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FF7E00"></stop>
+                <stop offset="100%" stop-color="#FB0300"></stop>
+            </linearGradient>
+            <linearGradient id="linearColors4" x1="1" y1="1" x2="0" y2="0">
+                <stop offset="0%" stop-color="#FB0300"></stop>
+                <stop offset="100%" stop-color="#9B004A"></stop>
+            </linearGradient>
+            <linearGradient id="linearColors5" x1="0.5" y1="1" x2="0.5" y2="0">
+                <stop offset="0%" stop-color="#9B004A"></stop>
+                <stop offset="100%" stop-color="#7D0022"></stop>
+            </linearGradient>
+            <linearGradient id="linearColors6" x1="0" y1="1" x2="1" y2="0">
+                <stop offset="0%" stop-color="#7D0022"></stop>
+                <stop offset="100%" stop-color="#01E400"></stop>
+            </linearGradient>
+        </defs>
+        <!-- Фон серого цвета       -->
+        <rect width="100%" height="100%" fill="#D0D0D0" />
+        <!-- Путь заполнения линии прогрессбара     -->
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="18"/>
+        <path d="M150 10 a120 120 0 0 1 103.9230 60"
+              fill="none" stroke="url(#linearColors1)" stroke-width="10" />
+        <path d="M253.9230 70 a120 120 0 0 1 0 120"
+              fill="none" stroke="url(#linearColors2)" stroke-width="10" />
+        <path d="M253.9230 190 a120 120 0 0 1 -103.9230 60"
+              fill="none" stroke="url(#linearColors3)" stroke-width="10" />
+        <path d="M150 250 a120 120 0 0 1 -103.9230 -60"
+              fill="none" stroke="url(#linearColors4)" stroke-width="10" />
+        <path d="M46.077 190 a120 120 0 0 1 0 -120"
+              fill="none" stroke="url(#linearColors5)" stroke-width="10" />
+        <path d="M46.077 70 a120 120 0 0 1 103.9230 -60"
+              fill="none" stroke="url(#linearColors6)" stroke-width="10" />
+        <circle id="check" cx="60" cy="60" r="50" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="314"  stroke="url(#linearColors)" stroke-width="18" >
+            <!--Анимация  изменение отступа линии stroke-dashoffset от 314 до 0 -->
+            <animate attributeName="stroke-dashoffset" dur="1s" begin="svg1.click" values="314;0" fill="freeze" />
+        </circle>
+        <text id="count" x="50%" y="50%" fill="#717171" text-anchor="middle" dy="7" font-size="20">HTML</text>
+    </svg>
+
+    <svg id="svg2" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="200" height="200" viewBox="0 0 120 120" >
+        <!-- Фон серого цвета       -->
+        <rect width="100%" height="100%" fill="#D0D0D0" />
+        <!-- Путь заполнения линии прогрессбара     -->
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="12"/>
+        <circle cx="60" cy="60" r="50" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="0, 314"  stroke="purple" stroke-width="12" >
+            <!-- Анимация изменения длины черты stroke-dasharray от нуля до максимума 314 -->
+            <animate attributeName="stroke-dasharray" dur="4s" begin="svg2.click" values="0,314;314,0" fill="freeze" />
+        </circle>
+        <text id="count" x="50%" y="50%" fill="#622B80" text-anchor="middle" dy="7" font-size="20">Click</text>
+    </svg>
+
+    <svg id="svg3" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="200" height="200" viewBox="0 0 120 120" >
+        <!-- Фон серого цвета       -->
+        <rect width="100%" height="100%" fill="#D0D0D0" />
+        <!-- Показывает путь заполнения  -->
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="8"/>
+        <!-- Линия, которая делится с помощью stroke-dasharray на две части -->
+        <circle cx="60" cy="60" r="50"  fill="none" stroke-dashoffset="-78.5" stroke-dasharray="0,157 0,157"  stroke="orange" stroke-width="8" >
+            <!-- Анимация заполнения из одной точки двумя линиями -->
+            <animate attributeName="stroke-dasharray" dur="3s" begin="svg3.click" values="0,157 0,157;0,0,314,0" fill="freeze" />
+        </circle>
+        <text id="count" x="50%" y="50%" fill="#E49400" text-anchor="middle" dy="7" font-size="20">Click</text>
+    </svg>
+
+    <svg id="svg4" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="200" height="200" viewBox="0 0 120 120" >
+        <defs>
+            <mask id="msk1">
+                <rect width="100%" height="100%" fill="white" />
+                <circle cx="60" cy="60" r="50"  stroke= "black"  fill="none" stroke-dashoffset="0" stroke-dasharray="314"   stroke-width="14" >
+                    <!-- Анимация сдвига маски реализует открывание прерывистой линии -->
+                    <animate attributeName="stroke-dashoffset" dur="2s" begin="svg4.click" values="0;-314;" fill="freeze" />
+                </circle>
+            </mask>
+        </defs>
+        <!-- Фон серого цвета       -->
+        <rect width="100%" height="100%" fill="#D0D0D0" />
+        <!-- Путь заполнения линии прогрессбара     -->
+        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="12"/>
+        <!-- Прерывистая линия заэкранирована маской mask="url(#msk1)" -->
+        <circle cx="60" cy="60" r="50" mask="url(#msk1)" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="3.14, 3.14"  stroke="#62169D" stroke-width="12" />
+        <text id="count" x="50%" y="50%" fill="#622B80" text-anchor="middle" dy="7" font-size="20">Click</text>
+    </svg>
+    <script>
+        function TotalLength(target){
+            const path = document.querySelector('#check')
+            let len = Math.round(path.getTotalLength() )
+            path.setAttribute('stroke-dashoffset', len)
+            const tx = document.querySelector('#count')
+            tx.setAttribute('font-size', '12')
+            tx.setAttribute('fill', '#000000')
+
+            //
+
+            let iv = setInterval(()=>{
+                let n = path.getAttribute('stroke-dashoffset')
+                let proc = Math.floor((316 - n) / 3.14) // растет от 0 до target
+                //console.log(n) 314 - 2    0 - 100%
+                if (target <= proc ) {
+                    clearInterval(iv)
+                    console.log(Math.floor((314 - n) / 3.14), n)
+                }
+                if(proc === 25) {tx.setAttribute('fill', '#ff3737'); path.setAttribute('stroke', '#ff3737')}
+                if(proc === 50) {tx.setAttribute('fill', '#ffa702'); path.setAttribute('stroke', '#ffa702')}
+                if(proc === 75) {tx.setAttribute('fill', '#1ee000'); path.setAttribute('stroke', '#1ee000')}
+                tx.innerHTML ='HTML ' +  Math.floor((316 - n) / 3.14) + '%'
+                path.setAttribute('stroke-dashoffset', n-2)
+            }, 20)
+        }
+    </script>
 </div>
 </body>
 </html>
