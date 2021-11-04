@@ -8,7 +8,7 @@ html {
     overflow-y: hidden;
 }
 body {
-    padding: 100px 40px;
+    padding: 30px 20px;
     background: #d4fff5;
     font-family: Verdana, Arial, Helvetica, sans-serif;
     color: #151526;
@@ -17,11 +17,35 @@ h2 {
     text-align: center;
     font-size: 1.35rem;
     border-radius: 7px;
-    padding: 5px 10px;
+    padding: 14px 10px 6px;
+    margin-bottom: 15px;
     color: #ffca92;
     text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
     background: rgb(105,0,61);
     background: linear-gradient(175deg, rgba(105,0,61,1) 0%, rgba(148,0,78,1) 27%, rgb(228, 45, 166) 100%);
+}
+h3 {
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 7px;
+    padding: 8px 10px 5px;
+    margin-bottom: 12px;
+    color: #d5ff92;
+    text-shadow: -1px -1px 1px rgba(255,255,255,.1), 1px 1px 1px rgba(0,0,0,.5);
+    background: rgb(105,0,61);
+    background: linear-gradient(165deg, rgb(105, 0, 30) 0%, rgb(158, 9, 88) 27%, rgb(229, 78, 138) 100%);
+}
+#btn1 {
+    width: 200px;
+    display: block;
+    margin: 8px auto;
+    background: rgb(1, 111, 34);
+    color: #d4fff5;
+    border-radius: 10px;
+}
+#btn1:disabled {
+    background: rgb(117, 128, 119);
+    color: #bfd0cc;
 }
 #txt{
     border: 1px solid #474747;
@@ -58,13 +82,8 @@ button{
     border-radius: 7px;
     background: #768186;
 }
-.sss {
-    background: #01E400;
-    background: #FEFF01;
-    background: #FF7E00;
-    background: #FB0300;
-    background: #9B004A;
-    background: #7D0022;
-
+.flx {
+    display: flex;
+    justify-content: space-around;
 }
->>>>>>> branch2
+

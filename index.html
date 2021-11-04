@@ -18,115 +18,157 @@
 <div class="content">
     <h2>Hello world!</h2>
     <p><img src="img/drakon.png" alt="drakon"></p>
-<<<<<<< HEAD
-    <div id="txt">Other text</div>
-    <button id="btn1">Button</button>
-=======
-    <div id="txt">Other text</div><p>https://black1277.github.io/</p>
-    <div class="dinamics" id="din">Animate</div>
-    <button id="btn1">Button</button>
+    <div id="txt">No javascript text</div>
+    <p>https://black1277.github.io/</p>
+    <div class="dinamics" id="din">Animate me (dont click!)</div>
+    <button id="btn1">Click for animate</button>
+    <h3>SVG</h3>
+    <div class="flx">
+        <svg id="svg1" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="200" height="200" viewBox="0 0 120 120" >
+            <defs>
+                <linearGradient id="linearColors" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="5%" stop-color="#01E400"></stop>
+                    <stop offset="25%" stop-color="#FEFF01"></stop>
+                    <stop offset="40%" stop-color="#FF7E00"></stop>
+                    <stop offset="60%" stop-color="#FB0300"></stop>
+                    <stop offset="80%" stop-color="#9B004A"></stop>
+                    <stop offset="100%" stop-color="#7D0022"></stop>
+                </linearGradient>
+            </defs>
+            <!-- Фон серого цвета       -->
+            <rect width="100%" height="100%" fill="#D0D0D0" />
+            <!-- Путь заполнения линии прогрессбара     -->
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="18"/>
+            <circle id="check" cx="60" cy="60" r="50" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="314"  stroke="url(#linearColors)" stroke-width="18" >
+                <!--Анимация  изменение отступа линии stroke-dashoffset от 314 до 0 -->
+                <animate id="ani1" attributeName="stroke-dashoffset" dur="1s" begin="svg1.click" values="314;0" fill="freeze" />
+            </circle>
+            <text id="count1" x="50%" y="50%" fill="#717171" text-anchor="middle" dy="7" font-size="20">HTML</text>
+        </svg>
 
-    <svg id="svg1" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="200" height="200" viewBox="0 0 120 120" >
+        <svg id="svg2" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="200" height="200" viewBox="0 0 120 120" >
+            <!-- Фон серого цвета       -->
+            <rect width="100%" height="100%" fill="#D0D0D0" />
+            <!-- Путь заполнения линии прогрессбара     -->
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="12"/>
+            <circle cx="60" cy="60" r="50" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="0, 314"  stroke="purple" stroke-width="12" >
+                <!-- Анимация изменения длины черты stroke-dasharray от нуля до максимума 314 -->
+                <animate attributeName="stroke-dasharray" dur="4s" begin="svg2.click" values="0,314;314,0" fill="freeze" />
+            </circle>
+            <text id="count2" x="50%" y="50%" fill="#622B80" text-anchor="middle" dy="7" font-size="20">Click</text>
+        </svg>
+
+        <svg id="svg3" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="200" height="200" viewBox="0 0 120 120" >
+            <!-- Фон серого цвета       -->
+            <rect width="100%" height="100%" fill="#D0D0D0" />
+            <!-- Показывает путь заполнения  -->
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="8"/>
+            <!-- Линия, которая делится с помощью stroke-dasharray на две части -->
+            <circle cx="60" cy="60" r="50"  fill="none" stroke-dashoffset="-78.5" stroke-dasharray="0,157 0,157"  stroke="orange" stroke-width="8" >
+                <!-- Анимация заполнения из одной точки двумя линиями -->
+                <animate attributeName="stroke-dasharray" dur="3s" begin="svg3.click" values="0,157 0,157;0,0,314,0" fill="freeze" />
+            </circle>
+            <text id="count3" x="50%" y="50%" fill="#E49400" text-anchor="middle" dy="7" font-size="20">Click</text>
+        </svg>
+
+        <svg id="svg4" xmlns="http://www.w3.org/2000/svg"
+             xmlns:xlink="http://www.w3.org/1999/xlink"
+             width="200" height="200" viewBox="0 0 120 120" >
+            <defs>
+                <mask id="msk1">
+                    <rect width="100%" height="100%" fill="white" />
+                    <circle cx="60" cy="60" r="50"  stroke= "black"  fill="none" stroke-dashoffset="0" stroke-dasharray="314"   stroke-width="14" >
+                        <!-- Анимация сдвига маски реализует открывание прерывистой линии -->
+                        <animate attributeName="stroke-dashoffset" dur="2s" begin="svg4.click" values="0;-314;" fill="freeze" />
+                    </circle>
+                </mask>
+            </defs>
+            <!-- Фон серого цвета       -->
+            <rect width="100%" height="100%" fill="#D0D0D0" />
+            <!-- Путь заполнения линии прогрессбара     -->
+            <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="12"/>
+            <!-- Прерывистая линия заэкранирована маской mask="url(#msk1)" -->
+            <circle cx="60" cy="60" r="50" mask="url(#msk1)" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="3.14, 3.14"  stroke="#62169D" stroke-width="12" />
+            <text id="count4" x="50%" y="50%" fill="#622B80" text-anchor="middle" dy="7" font-size="20">Click</text>
+        </svg>
+    </div>
+
+    <svg viewBox="-207 -207 414 414" width="200" xmlns="http://www.w3.org/2000/svg">
         <defs>
-            <linearGradient id="linearColors" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="5%" stop-color="#01E400"></stop>
-                <stop offset="25%" stop-color="#FEFF01"></stop>
-                <stop offset="40%" stop-color="#FF7E00"></stop>
-                <stop offset="60%" stop-color="#FB0300"></stop>
-                <stop offset="80%" stop-color="#9B004A"></stop>
-                <stop offset="100%" stop-color="#7D0022"></stop>
+            <radialGradient id="gWt">
+                <stop style="stop-color:#fff" offset="0"/>
+                <stop style="stop-color:#fff0" offset="1"/>
+            </radialGradient>
+            <!-- part for firefox: using central projection of 3 rectangles -->
+            <linearGradient id="gYM" x1="0" x2="0" y1="0" y2="100%">
+                <stop style="stop-color:#ef08" offset="0"/>
+                <stop style="stop-color:#ff0" offset=".005"/>
+                <stop style="stop-color:#fc0" offset=".1827"/>
+                <stop style="stop-color:#f90" offset=".2924"/>
+                <stop style="stop-color:#f60" offset=".3728"/>
+                <stop style="stop-color:#f00" offset=".5"/>
+                <stop style="stop-color:#f06" offset=".6272"/>
+                <stop style="stop-color:#f09" offset=".7076"/>
+                <stop style="stop-color:#f0c" offset=".8173"/>
+                <stop style="stop-color:#f0f" offset=".995"/>
+                <stop style="stop-color:#e0f8" offset="1"/>
             </linearGradient>
+            <linearGradient id="gCY" href="#gYM">
+                <stop style="stop-color:#0ef8" offset="0"/>
+                <stop style="stop-color:#0ff" offset=".005"/>
+                <stop style="stop-color:#0fc" offset=".1827"/>
+                <stop style="stop-color:#0f9" offset=".2924"/>
+                <stop style="stop-color:#0f6" offset=".3728"/>
+                <stop style="stop-color:#0f0" offset=".5"/>
+                <stop style="stop-color:#6f0" offset=".6272"/>
+                <stop style="stop-color:#9f0" offset=".7076"/>
+                <stop style="stop-color:#cf0" offset=".8173"/>
+                <stop style="stop-color:#ff0" offset=".995"/>
+                <stop style="stop-color:#fe08" offset="1"/>
+            </linearGradient>
+            <linearGradient id="gMC" href="#gYM">
+                <stop style="stop-color:#f0e8" offset="0"/>
+                <stop style="stop-color:#f0f" offset=".005"/>
+                <stop style="stop-color:#c0f" offset=".1827"/>
+                <stop style="stop-color:#90f" offset=".2924"/>
+                <stop style="stop-color:#60f" offset=".3728"/>
+                <stop style="stop-color:#00f" offset=".5"/>
+                <stop style="stop-color:#06f" offset=".6272"/>
+                <stop style="stop-color:#09f" offset=".7076"/>
+                <stop style="stop-color:#0cf" offset=".8173"/>
+                <stop style="stop-color:#0ff" offset=".995"/>
+                <stop style="stop-color:#0fe8" offset="1"/>
+            </linearGradient>
+            <rect id="r" width="200" height="700" style="transform:matrix3d(
+      -29,0,0,100,
+      0,1,0,0,
+      0,0,1,0,
+      200,-350,1,1
+    )"/>
         </defs>
-        <!-- Фон серого цвета       -->
-        <rect width="100%" height="100%" fill="#D0D0D0" />
-        <!-- Путь заполнения линии прогрессбара     -->
-        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="18"/>
-        <circle id="check" cx="60" cy="60" r="50" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="314"  stroke="url(#linearColors)" stroke-width="18" >
-            <!--Анимация  изменение отступа линии stroke-dashoffset от 314 до 0 -->
-            <animate id="ani1" attributeName="stroke-dashoffset" dur="1s" begin="svg1.click" values="314;0" fill="freeze" />
-        </circle>
-        <text id="count1" x="50%" y="50%" fill="#717171" text-anchor="middle" dy="7" font-size="20">HTML</text>
+        <clipPath id="cc">
+            <path d="M200,0A200,200,0, 1,0,0,200 200,200,0,0,0,200,0zM100,0A100,100,0, 0,1,0,100 100,100,0, 1,1,100,0z"/>
+        </clipPath>
+        <!-- circle r="199" fill="#000"/ -->
+        <g clip-path="url(#cc)" id="m">
+            <use href="#r" fill="url(#gCY)" transform="rotate(-120)"/>
+            <use href="#r" fill="url(#gYM)"/>
+            <use href="#r" fill="url(#gMC)" transform="rotate(120)"/>
+            <!-- for Chrome use conic gradient (does not work with any svg object but with foreign)
+             Firefox ignores this object due to unknown keyword in style -->
+            <foreignObject width="400" height="400" x="-200" y="-200" style="background:conic-gradient(from 90deg,
+   #f00,#f0f,#00f,#0ff,#0f0,#ff0,#f00);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: auto;"/>
+        </g>
     </svg>
-
-    <svg id="svg2" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="200" height="200" viewBox="0 0 120 120" >
-        <!-- Фон серого цвета       -->
-        <rect width="100%" height="100%" fill="#D0D0D0" />
-        <!-- Путь заполнения линии прогрессбара     -->
-        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="12"/>
-        <circle cx="60" cy="60" r="50" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="0, 314"  stroke="purple" stroke-width="12" >
-            <!-- Анимация изменения длины черты stroke-dasharray от нуля до максимума 314 -->
-            <animate attributeName="stroke-dasharray" dur="4s" begin="svg2.click" values="0,314;314,0" fill="freeze" />
-        </circle>
-        <text id="count2" x="50%" y="50%" fill="#622B80" text-anchor="middle" dy="7" font-size="20">Click</text>
-    </svg>
-
-    <svg id="svg3" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="200" height="200" viewBox="0 0 120 120" >
-        <!-- Фон серого цвета       -->
-        <rect width="100%" height="100%" fill="#D0D0D0" />
-        <!-- Показывает путь заполнения  -->
-        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="8"/>
-        <!-- Линия, которая делится с помощью stroke-dasharray на две части -->
-        <circle cx="60" cy="60" r="50"  fill="none" stroke-dashoffset="-78.5" stroke-dasharray="0,157 0,157"  stroke="orange" stroke-width="8" >
-            <!-- Анимация заполнения из одной точки двумя линиями -->
-            <animate attributeName="stroke-dasharray" dur="3s" begin="svg3.click" values="0,157 0,157;0,0,314,0" fill="freeze" />
-        </circle>
-        <text id="count3" x="50%" y="50%" fill="#E49400" text-anchor="middle" dy="7" font-size="20">Click</text>
-    </svg>
-
-    <svg id="svg4" xmlns="http://www.w3.org/2000/svg"
-         xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="200" height="200" viewBox="0 0 120 120" >
-        <defs>
-            <mask id="msk1">
-                <rect width="100%" height="100%" fill="white" />
-                <circle cx="60" cy="60" r="50"  stroke= "black"  fill="none" stroke-dashoffset="0" stroke-dasharray="314"   stroke-width="14" >
-                    <!-- Анимация сдвига маски реализует открывание прерывистой линии -->
-                    <animate attributeName="stroke-dashoffset" dur="2s" begin="svg4.click" values="0;-314;" fill="freeze" />
-                </circle>
-            </mask>
-        </defs>
-        <!-- Фон серого цвета       -->
-        <rect width="100%" height="100%" fill="#D0D0D0" />
-        <!-- Путь заполнения линии прогрессбара     -->
-        <circle cx="60" cy="60" r="50" fill="none" stroke="#E1E1E1" stroke-width="12"/>
-        <!-- Прерывистая линия заэкранирована маской mask="url(#msk1)" -->
-        <circle cx="60" cy="60" r="50" mask="url(#msk1)" transform="rotate(-90 60 60)" fill="none" stroke-dashoffset="314" stroke-dasharray="3.14, 3.14"  stroke="#62169D" stroke-width="12" />
-        <text id="count4" x="50%" y="50%" fill="#622B80" text-anchor="middle" dy="7" font-size="20">Click</text>
-    </svg>
-
-    <script>
-        function TotalLength(target){
-          if(target > 100) target = 100
-            const path = document.querySelector('#check')
-            let len = Math.round(path.getTotalLength() )
-            path.setAttribute('stroke-dashoffset', len)
-            const tx = document.querySelector('#count1')
-            const ani1 = document.querySelector('#ani1')
-            ani1.setAttribute('fill', 'remove')
-            tx.setAttribute('font-size', '12')
-            tx.setAttribute('fill', '#000000')
-
-            let iv = setInterval(()=>{
-                let n = path.getAttribute('stroke-dashoffset')
-                let proc = Math.floor((316 - n) / 3.14) // растет от 0 до target
-                if (target <= proc ) {
-                    clearInterval(iv)
-                }
-                if(proc === 25) {tx.setAttribute('fill', '#ff3737'); }
-                if(proc === 50) {tx.setAttribute('fill', '#ffa702'); }
-                if(proc === 75) {tx.setAttribute('fill', '#1ee000'); }
-                tx.innerHTML ='HTML ' +  Math.floor((316 - n) / 3.14) + '%'
-                path.setAttribute('stroke-dashoffset', String(n-2))
-            }, 20)
-        }
-    </script>
->>>>>>> branch2
 </div>
 </body>
 </html>
