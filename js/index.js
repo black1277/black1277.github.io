@@ -16,9 +16,9 @@ document.addEventListener("DOMContentLoaded", (a)=>{
     await  animateCSS('din', 'backOutDown')
     await  animateCSS('din', 'fadeInRight')
     $btn1.disabled = false
-    $btn1.textContent = 'Click for animate'
+    $btn1.textContent = 'Click for animate!'
   })
-  $content.innerHTML = '<p>Text from js file</p>' + new Date()
+  $content.innerHTML = '<p>New next from js file</p>' + new Date()
 })
 const delay = ms => {
   return new Promise(r => setTimeout(() => r(), ms))
