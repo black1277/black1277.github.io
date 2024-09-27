@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", (a)=>{
   $content.innerHTML = '<p>New next from js file</p>' + new Date()
 })
 // для пауз
-const delay = ms => return new Promise(r => setTimeout(() => r(), ms))
+const delay = ms => new Promise(r => setTimeout(() => r(), ms))
 
 const animateCSS = (element, animation, prefix = 'animate__') =>
 
